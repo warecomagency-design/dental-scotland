@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Papatya Dental Clinic Turkey"
               width={140}
               height={56}
