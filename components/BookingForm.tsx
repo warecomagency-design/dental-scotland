@@ -2,16 +2,21 @@
 import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 
-const meetupCities = ["Edinburgh – 28 Haziran", "Glasgow – 5 Temmuz", "Aberdeen – 12 Temmuz"];
+const meetupCities = [
+  "Edinburgh — 28 June",
+  "Glasgow — 5 July",
+  "Aberdeen — 12 July",
+];
+
 const treatments = [
-  "Diş İmplantı",
-  "Zirkonyum / Porselen Kaplama",
-  "Hollywood Smile",
-  "Diş Beyazlatma",
-  "Köprü Yapımı",
-  "Diş Eti Tedavisi",
-  "Genel Değerlendirme",
-  "Diğer",
+  "Dental Implant(s)",
+  "Zirconia / Porcelain Crowns",
+  "Hollywood Smile / Veneers",
+  "Teeth Whitening",
+  "Dental Bridge",
+  "Gum Treatment",
+  "General Assessment",
+  "Other / Not Sure Yet",
 ];
 
 export default function BookingForm() {
@@ -35,7 +40,6 @@ export default function BookingForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate submission — replace with real API/email integration
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
     setSubmitted(true);
@@ -43,18 +47,18 @@ export default function BookingForm() {
 
   if (submitted) {
     return (
-      <section id="randevu" className="py-24 bg-[#0f172a]">
+      <section id="booking" className="py-24 bg-[#0f172a]">
         <div className="max-w-xl mx-auto px-4 text-center">
           <div className="bg-white/5 border border-[#c9973a]/30 rounded-3xl p-12">
             <CheckCircle size={64} className="text-[#c9973a] mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-white mb-4">
-              Randevunuz Alındı! 🎉
+              Booking Received! 🎉
             </h2>
             <p className="text-white/70 mb-2">
-              24 saat içinde WhatsApp veya e-posta yoluyla sizi arayacağız.
+              We will contact you within 24 hours via WhatsApp or email to confirm your spot.
             </p>
             <p className="text-white/50 text-sm">
-              Lütfen telefon numaranızı kontrol ediniz.
+              Please keep an eye on your phone and inbox.
             </p>
           </div>
         </div>
@@ -63,31 +67,30 @@ export default function BookingForm() {
   }
 
   return (
-    <section id="randevu" className="py-24 bg-[#0f172a]">
+    <section id="booking" className="py-24 bg-[#0f172a]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div>
             <span className="inline-block bg-[#c9973a]/20 text-[#c9973a] text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-              Ücretsiz Randevu
+              Free Consultation
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Bir MeetUp&apos;a Katılmak
+              Attending a MeetUp
               <br />
-              <span className="text-[#c9973a]">Hiçbir Taahhüt Gerektirmez</span>
+              <span className="text-[#c9973a]">Commits You to Nothing.</span>
             </h2>
             <p className="text-white/70 mb-8">
-              Formu doldurun, 24 saat içinde sizi arayalım. Hangi MeetUp&apos;a
-              katılmak istediğinizi, tedavi ihtiyacınızı ve sorularınızı birlikte
-              konuşalım. Tamamen ücretsiz.
+              Fill in the form and we will call you within 24 hours to confirm
+              which MeetUp you would like to attend, walk you through what to
+              expect, and answer any questions upfront. Completely free.
             </p>
-
             <div className="space-y-4">
               {[
-                "Katılım ücretsiz, bağlayıcı değil",
-                "24 saat içinde WhatsApp ile dönüş",
-                "Türkçe ve İngilizce destek",
-                "Ön değerlendirme dahil",
+                "Attendance is free — no obligation whatsoever",
+                "24-hour WhatsApp response guaranteed",
+                "English-speaking team throughout",
+                "Free preliminary assessment included",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <CheckCircle size={18} className="text-[#c9973a]" />
@@ -100,27 +103,23 @@ export default function BookingForm() {
           {/* Form */}
           <div className="bg-white rounded-3xl p-8">
             <h3 className="text-xl font-bold text-[#0f172a] mb-6">
-              MeetUp Randevusu Al
+              Reserve Your Free Spot
             </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Adınız *
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
                   <input
                     name="name"
                     required
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="İsim Soyisim"
+                    placeholder="Your name"
                     className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#c9973a]/40 focus:border-[#c9973a]"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Telefon *
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
                   <input
                     name="phone"
                     required
@@ -133,31 +132,27 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  E-posta *
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
                 <input
                   name="email"
                   type="email"
                   required
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="email@ornek.com"
+                  placeholder="you@example.com"
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#c9973a]/40 focus:border-[#c9973a]"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Hangi MeetUp?
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Which MeetUp?</label>
                 <select
                   name="city"
                   value={form.city}
                   onChange={handleChange}
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#c9973a]/40 focus:border-[#c9973a] bg-white"
                 >
-                  <option value="">Seçiniz...</option>
+                  <option value="">Select a city...</option>
                   {meetupCities.map((c) => (
                     <option key={c} value={c}>{c}</option>
                   ))}
@@ -165,16 +160,14 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Tedavi İhtiyacınız
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Treatment Interest</label>
                 <select
                   name="treatment"
                   value={form.treatment}
                   onChange={handleChange}
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#c9973a]/40 focus:border-[#c9973a] bg-white"
                 >
-                  <option value="">Seçiniz...</option>
+                  <option value="">Select...</option>
                   {treatments.map((t) => (
                     <option key={t} value={t}>{t}</option>
                   ))}
@@ -182,15 +175,13 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Notunuz (isteğe bağlı)
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Anything else? (optional)</label>
                 <textarea
                   name="message"
                   value={form.message}
                   onChange={handleChange}
                   rows={3}
-                  placeholder="Sormak istedikleriniz veya ek bilgi..."
+                  placeholder="Questions, concerns, or extra context..."
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#c9973a]/40 focus:border-[#c9973a] resize-none"
                 />
               </div>
@@ -201,17 +192,17 @@ export default function BookingForm() {
                 className="w-full bg-[#c9973a] hover:bg-[#b8862f] disabled:opacity-70 text-white py-4 rounded-xl font-bold text-base transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#c9973a]/30"
               >
                 {loading ? (
-                  <span className="animate-pulse">Gönderiliyor...</span>
+                  <span className="animate-pulse">Sending...</span>
                 ) : (
                   <>
                     <Send size={18} />
-                    Ücretsiz Randevu Al
+                    Reserve My Free Spot
                   </>
                 )}
               </button>
 
               <p className="text-gray-400 text-xs text-center">
-                Bilgileriniz üçüncü şahıslarla paylaşılmaz. 24 saat içinde dönüş garantisi.
+                Your details are never shared with third parties. We respond within 24 hours.
               </p>
             </form>
           </div>

@@ -3,37 +3,37 @@ import { MapPin, Calendar, Users, CheckCircle } from "lucide-react";
 const upcomingMeetups = [
   {
     city: "Edinburgh",
-    date: "28 Haziran 2025",
-    time: "14:00 – 17:00",
+    date: "28 June 2025",
+    time: "2:00 pm – 5:00 pm",
     venue: "The Hub, Castlehill",
-    spots: "12 kişilik — 5 yer kaldı",
+    spots: "12 seats — only 5 left",
     urgent: true,
   },
   {
     city: "Glasgow",
-    date: "5 Temmuz 2025",
-    time: "13:00 – 16:00",
+    date: "5 July 2025",
+    time: "1:00 pm – 4:00 pm",
     venue: "Malmaison Hotel, Glasgow",
-    spots: "15 kişilik — 9 yer kaldı",
+    spots: "15 seats — 9 left",
     urgent: false,
   },
   {
     city: "Aberdeen",
-    date: "12 Temmuz 2025",
-    time: "14:00 – 17:00",
+    date: "12 July 2025",
+    time: "2:00 pm – 5:00 pm",
     venue: "The Chester Hotel, Aberdeen",
-    spots: "12 kişilik — yer açık",
+    spots: "12 seats — open",
     urgent: false,
   },
 ];
 
 const whatHappens = [
-  "Klinik ekibimizle birebir tanışırsınız",
-  "Önceki hastalarımızın gerçek deneyimlerini dinlersiniz",
-  "Diş fotoğraflarınızı yerinde değerlendiririz",
-  "Ön fiyat tahmini alırsınız (ücretsiz)",
-  "Tüm sorularınızı dilediğinizce sorarsınız",
-  "İstanbul ve Antalya kliniklerimizi video ile görürsünüz",
+  "Meet our clinic team and coordinator face-to-face",
+  "Hear real stories from patients who have already been",
+  "Get a same-day on-the-spot preliminary assessment",
+  "Receive an indicative price estimate — completely free",
+  "Ask anything you want, no pressure, no commitment",
+  "Watch a virtual tour of our Istanbul & Antalya clinics",
 ];
 
 export default function MeetupSection() {
@@ -42,25 +42,23 @@ export default function MeetupSection() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-block bg-[#c9973a]/10 text-[#c9973a] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
-            Dental MeetUp
+            Dental MeetUp Events
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a] mb-4">
-            İskoçya&apos;da Yüz Yüze
+            We Come to Scotland
             <br />
-            <span className="text-[#c9973a]">Tanışıyoruz</span>
+            <span className="text-[#c9973a]">So You Can Meet Us First</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Türkiye&apos;ye gitmeden önce tüm şüphelerinizi giderin. MeetUp&apos;larımız
-            ücretsiz, samimi ve bağlayıcı değil — sadece tanışma.
+            Before you commit to anything, come and meet us in person.
+            Our MeetUp events are free, relaxed and completely no-obligation.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* What happens */}
           <div>
-            <h3 className="text-xl font-bold text-[#0f172a] mb-6">
-              MeetUp&apos;ta Neler Olur?
-            </h3>
+            <h3 className="text-xl font-bold text-[#0f172a] mb-6">What Happens at a MeetUp?</h3>
             <div className="space-y-3 mb-8">
               {whatHappens.map((item) => (
                 <div key={item} className="flex items-start gap-3">
@@ -73,21 +71,19 @@ export default function MeetupSection() {
             <div className="bg-[#0f172a] rounded-2xl p-6 text-white">
               <div className="flex items-center gap-2 mb-3">
                 <Users size={20} className="text-[#c9973a]" />
-                <span className="font-semibold">Gruplar küçük tutulur</span>
+                <span className="font-semibold">Small Groups Only</span>
               </div>
               <p className="text-white/70 text-sm">
-                Her MeetUp&apos;ta maksimum 15 kişi alıyoruz. Böylece herkese yeterli
-                zaman ayırabiliyoruz ve samimi bir ortam sağlıyoruz.
-                Kontenjanlar hızlı doluyor.
+                We cap every MeetUp at 15 attendees. This means you get real
+                time with us — not a sales pitch in a packed room.
+                Seats fill up fast, so book early.
               </p>
             </div>
           </div>
 
           {/* Upcoming meetups */}
           <div>
-            <h3 className="text-xl font-bold text-[#0f172a] mb-6">
-              Yaklaşan MeetUp&apos;lar
-            </h3>
+            <h3 className="text-xl font-bold text-[#0f172a] mb-6">Upcoming Events</h3>
             <div className="space-y-4">
               {upcomingMeetups.map((m) => (
                 <div
@@ -98,7 +94,7 @@ export default function MeetupSection() {
                 >
                   {m.urgent && (
                     <div className="inline-block bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-full mb-3">
-                      SON KONTENJANLAR!
+                      LAST FEW SEATS!
                     </div>
                   )}
                   <div className="flex items-start justify-between gap-4">
@@ -118,10 +114,10 @@ export default function MeetupSection() {
                     </div>
                   </div>
                   <a
-                    href="#randevu"
+                    href="#booking"
                     className="mt-4 block w-full bg-[#c9973a] hover:bg-[#b8862f] text-white text-center py-2.5 rounded-xl text-sm font-semibold transition-colors"
                   >
-                    Bu MeetUp&apos;a Katıl
+                    Reserve My Seat — Free
                   </a>
                 </div>
               ))}

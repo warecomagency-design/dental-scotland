@@ -4,36 +4,36 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Türkiye'de diş tedavisi güvenli mi?",
-    a: "Partnerimiz klinikler JCI (Uluslararası Ortak Komisyon) akreditasyonuna sahip, Avrupa standartlarında sterilizasyon ve malzeme kullanıyor. Avrupa'dan her yıl 100,000'den fazla hasta medikal turizm için Türkiye'yi tercih ediyor.",
+    q: "Is dental treatment in Turkey safe?",
+    a: "Absolutely. Papatya Dental Clinic is equipped to international standards and uses German and Italian technology. Turkey attracts over 100,000 dental tourists from Europe every year, and the UK-wide trend of travelling to Turkey for dentistry is well-documented.",
   },
   {
-    q: "Dil engeli sorun olmaz mı?",
-    a: "Hayır. Türkçe ve İngilizce konuşan koordinatörlerimiz tüm süreç boyunca yanınızda. Kliniklerde de İngilizce konuşan doktor ve yardımcı personel bulunuyor.",
+    q: "Will there be a language barrier?",
+    a: "Not at all. Your dedicated English-speaking coordinator is with you from day one. Clinic staff also speak English and are very experienced with British patients.",
   },
   {
-    q: "Tedavi sonrası sorun olursa ne olur?",
-    a: "Tüm tedavilerimiz 12 ay garanti kapsamındadır. Herhangi bir sorun yaşarsanız WhatsApp koordinatörünüz aracılığıyla çözüm sağlıyoruz. Gerekirse klinik ikinci bir seans için sizi davet eder.",
+    q: "What if something goes wrong after I'm home?",
+    a: "All treatments carry a 12-month guarantee. Your coordinator remains reachable on WhatsApp throughout. If a clinical issue arises, the clinic will invite you back — at no additional treatment cost — to resolve it.",
   },
   {
-    q: "Kaç gün kalmam gerekir?",
-    a: "Tedaviye bağlı değişir. Beyazlatma için 2–3 gün, implant için ortalama 5–7 gün, Hollywood Smile için 5–8 gün yeterli. Tam süre ön değerlendirme sonrasında belirlenir.",
+    q: "How long do I need to stay in Turkey?",
+    a: "It depends on your treatment. Whitening takes 2–3 days; implants typically 5–7 days; a full Hollywood Smile around 5–8 days. Your exact timeline is confirmed after the free assessment.",
   },
   {
-    q: "Ödeme nasıl yapılır?",
-    a: "MeetUp sonrası tedaviye karar verirseniz küçük bir rezervasyon bedeli alınır. Tedavilerin büyük bölümü kliniktte, varışta ödenir. Nakit, kart veya havale ile ödeme kabul edilir.",
+    q: "How do I pay?",
+    a: "A small reservation deposit is taken after your MeetUp if you decide to proceed. The majority of the treatment cost is paid on arrival at the clinic. We accept cash, card and bank transfer.",
   },
   {
-    q: "MeetUp'a katılmak beni bağlar mı?",
-    a: "Kesinlikle hayır. MeetUp tamamen bilgilendirme amaçlıdır, herhangi bir ücret veya taahhüt gerektirmez. Orada konuşur, soru sorar ve dilediğiniz takdirde ilerleyebilirsiniz.",
+    q: "Does attending a MeetUp commit me to anything?",
+    a: "Absolutely not. MeetUp events are purely informational — free to attend, no deposit, no obligation. Come along, ask everything you want, then decide in your own time.",
   },
   {
-    q: "Uçuş ve konaklama dahil mi?",
-    a: "Uçuş fiyatı genellikle ayrıdır ancak en uygun seçenekleri biz öneriyoruz. Havalimanı karşılaması, otel ve klinik transferleri pakete dahildir. Konaklama tercihinize göre bütçe veya butik seçenekler sunabiliyoruz.",
+    q: "Are flights and accommodation included?",
+    a: "We advise on the best flight options (usually Edinburgh or Glasgow to Istanbul or Antalya) but the flight cost is separate. Airport pickup, hotel transfers and clinic transport are included in your package.",
   },
   {
-    q: "Hangi şehirde tedavi yaptırabilirim?",
-    a: "İstanbul ve Antalya olmak üzere iki ana kliniğimiz var. İkisi de modern, donanımlı ve İskoçyalı hastalara alışkın ekiplere sahip. Tercih size kalır.",
+    q: "Which city in Turkey will I be treated in?",
+    a: "We work with clinics in both Istanbul and Antalya. Both are modern, internationally accredited and well used to Scottish patients. The choice is yours — we will advise based on your treatment and travel preferences.",
   },
 ];
 
@@ -45,21 +45,18 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-block bg-[#c9973a]/10 text-[#c9973a] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
-            Sık Sorulan Sorular
+            FAQ
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a] mb-4">
-            Aklınızdaki Tüm
+            Every Question
             <br />
-            <span className="text-[#c9973a]">Soruların Cevabı</span>
+            <span className="text-[#c9973a]">You&apos;re Probably Thinking</span>
           </h2>
         </div>
 
         <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <div
-              key={i}
-              className="border border-gray-100 rounded-2xl overflow-hidden"
-            >
+            <div key={i} className="border border-gray-100 rounded-2xl overflow-hidden">
               <button
                 className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
                 onClick={() => setOpen(open === i ? null : i)}
@@ -67,9 +64,7 @@ export default function FAQ() {
                 <span className="font-semibold text-[#0f172a] text-sm">{faq.q}</span>
                 <ChevronDown
                   size={18}
-                  className={`text-[#c9973a] flex-shrink-0 transition-transform ${
-                    open === i ? "rotate-180" : ""
-                  }`}
+                  className={`text-[#c9973a] flex-shrink-0 transition-transform ${open === i ? "rotate-180" : ""}`}
                 />
               </button>
               {open === i && (
@@ -82,12 +77,12 @@ export default function FAQ() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-500 text-sm mb-4">Cevabını bulamadığınız bir soru mu var?</p>
+          <p className="text-gray-500 text-sm mb-4">Still have a question we haven&#39;t covered?</p>
           <a
-            href="#randevu"
+            href="#booking"
             className="inline-block bg-[#0f172a] hover:bg-[#1e3a5f] text-white px-8 py-3 rounded-full font-semibold text-sm transition-colors"
           >
-            Bize Sorun
+            Ask Us Directly
           </a>
         </div>
       </div>

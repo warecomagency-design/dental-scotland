@@ -5,14 +5,14 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "İskoçya Dental MeetUp | Türkiye'de Dünya Kalitesinde Diş Tedavisi",
+  title: "Papatya Dental Clinic Turkey | Scotland MeetUp Events",
   description:
-    "İskoçya'dan Türkiye'ye diş tedavisi için en güvenilir köprü. Ücretsiz danışmanlık, uçtan uca organizasyon, sosyal kanıt. Hemen randevu al.",
+    "Stop waiting years for NHS dental care. Papatya Dental Clinic Turkey brings world-class dentistry to Scottish patients — up to 70% savings, end-to-end organisation, free MeetUp events across Scotland.",
   openGraph: {
-    title: "İskoçya Dental MeetUp | Türkiye'de Dünya Kalitesinde Diş Tedavisi",
+    title: "Papatya Dental Clinic Turkey | Scotland MeetUp Events",
     description:
-      "İskoçya'dan Türkiye'ye diş tedavisi için en güvenilir köprü.",
-    locale: "tr_TR",
+      "Stop waiting years for NHS. Get your perfect smile in Turkey — free MeetUp events in Edinburgh, Glasgow & Aberdeen.",
+    locale: "en_GB",
     type: "website",
   },
 };
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="en">
       <body className={inter.className}>{children}</body>
     </html>
   );

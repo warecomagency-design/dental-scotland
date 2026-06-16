@@ -1,80 +1,76 @@
 const steps = [
   {
     number: "01",
-    title: "Ücretsiz MeetUp Randevusu",
-    desc: "İskoçya'da düzenlediğimiz Dental MeetUp etkinliklerimizden birine katılıyorsunuz. Yüz yüze sorularınızı soruyorsunuz, önceki hastalarımızla tanışıyorsunuz.",
+    title: "Free MeetUp Event in Scotland",
+    desc: "Attend one of our free Dental MeetUp events across Scotland. Meet our team face-to-face, ask any question you have, and speak with patients who have already been through the journey.",
     icon: "🤝",
-    tag: "İskoçya'da",
+    tag: "In Scotland",
   },
   {
     number: "02",
-    title: "Online Ön Değerlendirme",
-    desc: "Diş fotoğraflarınızı bizimle paylaşıyorsunuz. Türkiye'deki uzman dişhekimimiz 48 saat içinde ücretsiz ön değerlendirme ve yaklaşık fiyat teklifi gönderiyor.",
+    title: "Free Online Assessment",
+    desc: "Share a few photos of your teeth with us. Our specialist dentist in Turkey will send you a free preliminary assessment and an indicative price within 48 hours.",
     icon: "📱",
     tag: "Online",
   },
   {
     number: "03",
-    title: "Tedavi Planı & Fiyat Onayı",
-    desc: "Klinik ekibiyle video görüşme yapıyorsunuz. Kesin tedavi planı, garantili fiyat ve tahmini süre belirleniyor. Tüm evraklar Türkçe + İngilizce.",
+    title: "Treatment Plan & Price Confirmation",
+    desc: "Join a video call with the clinic team. Your finalised treatment plan, guaranteed price and estimated timeline are confirmed. All documents in English.",
     icon: "📋",
-    tag: "Video görüşme",
+    tag: "Video call",
   },
   {
     number: "04",
-    title: "Uçuş & Transfer Organizasyonu",
-    desc: "Uçuş tarihlerinizi bildiriminizden sonra havalimanı transferi, otel ve kliniğe ulaşım bizden. Türkçe + İngilizce konuşan koordinatörünüz tüm süreçte yanınızda.",
+    title: "Flights & Transfers Sorted",
+    desc: "Once you choose your travel dates, we arrange airport transfer, hotel and clinic transport. Your dedicated English-speaking coordinator is with you throughout.",
     icon: "✈️",
-    tag: "Tüm organizasyon bizde",
+    tag: "All logistics on us",
   },
   {
     number: "05",
-    title: "Türkiye'de Tedavi",
-    desc: "Modern, JCI akreditasyonlu klinikte tedaviniz tamamlanıyor. Ortalama 5–7 gün İstanbul ya da Antalya'da kalıyorsunuz. Tedavi arasında şehri keşfedebilirsiniz.",
+    title: "Treatment in Turkey",
+    desc: "Your treatment is completed at a modern, internationally accredited clinic in Istanbul or Antalya. Most patients stay 5–7 days — plenty of time to enjoy the city too.",
     icon: "🦷",
-    tag: "İstanbul / Antalya",
+    tag: "Istanbul / Antalya",
   },
   {
     number: "06",
-    title: "İskoçya'ya Dönüş & Takip",
-    desc: "Geri döndükten sonra 12 ay boyunca WhatsApp üzerinden takip hizmetimiz devam ediyor. Klinikteki tedaviler için de garantili hizmet alıyorsunuz.",
+    title: "Back in Scotland — 12-Month Support",
+    desc: "Our WhatsApp aftercare continues for 12 months after you return. All treatments come with a written clinic guarantee.",
     icon: "🏠",
-    tag: "12 ay garanti",
+    tag: "12-month guarantee",
   },
 ];
 
 export default function Process() {
   return (
-    <section id="surecimiz" className="py-24 bg-gray-50">
+    <section id="process" className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-block bg-[#c9973a]/10 text-[#c9973a] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
-            Adım Adım Süreç
+            Step by Step
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a] mb-4">
-            Başlangıçtan Bitişe
+            From First MeetUp
             <br />
-            <span className="text-[#c9973a]">Her Şeyi Biz Hallederiz</span>
+            <span className="text-[#c9973a]">to Perfect Smile — We Handle Everything</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            İlk MeetUp&apos;tan son kontrole kadar 6 adımda nasıl çalıştığımızı inceleyin.
-            Yüzlerce hasta bu yolu zaten tamamladı.
+            Here is exactly how we guide you from your first question to your final result.
+            Hundreds of Scottish patients have already made this journey.
           </p>
         </div>
 
         <div className="relative">
-          {/* Vertical line on desktop */}
           <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#c9973a]/80 via-[#c9973a]/40 to-transparent" />
 
           <div className="space-y-10">
             {steps.map((step, i) => (
               <div
                 key={step.number}
-                className={`flex flex-col lg:flex-row items-center gap-6 ${
-                  i % 2 !== 0 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`flex flex-col lg:flex-row items-center gap-6 ${i % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
               >
-                {/* Card */}
                 <div className="flex-1 w-full">
                   <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex items-start gap-4">
@@ -95,12 +91,10 @@ export default function Process() {
                   </div>
                 </div>
 
-                {/* Center dot */}
                 <div className="hidden lg:flex w-10 h-10 bg-[#c9973a] rounded-full border-4 border-white shadow-lg items-center justify-center flex-shrink-0 z-10">
                   <span className="text-white font-bold text-xs">{step.number}</span>
                 </div>
 
-                {/* Empty space for opposite side */}
                 <div className="flex-1 hidden lg:block" />
               </div>
             ))}
@@ -109,10 +103,10 @@ export default function Process() {
 
         <div className="text-center mt-16">
           <a
-            href="#randevu"
+            href="#booking"
             className="inline-block bg-[#c9973a] hover:bg-[#b8862f] text-white px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-[#c9973a]/30"
           >
-            Hemen Başla → Ücretsiz Randevu Al
+            Start Now → Book a Free Spot
           </a>
         </div>
       </div>
