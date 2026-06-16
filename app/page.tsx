@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import VideoTestimonials from "@/components/VideoTestimonials";
 import WhyTurkey from "@/components/WhyTurkey";
 import Process from "@/components/Process";
+import PastMeetups from "@/components/PastMeetups";
 import Testimonials from "@/components/Testimonials";
 import MeetupSection from "@/components/MeetupSection";
 import BookingForm from "@/components/BookingForm";
@@ -18,6 +19,7 @@ export default function Home() {
         <VideoTestimonials />
         <WhyTurkey />
         <Process />
+        <PastMeetups />
         <Testimonials />
         <MeetupSection />
         <BookingForm />
