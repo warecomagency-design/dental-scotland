@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import VideoTestimonials from "@/components/VideoTestimonials";
 import WhyTurkey from "@/components/WhyTurkey";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <VideoTestimonials />
         <WhyTurkey />
         <Process />
         <Testimonials />

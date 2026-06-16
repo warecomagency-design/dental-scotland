@@ -1,4 +1,5 @@
 import { ArrowDown, CheckCircle, Calendar, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const upcomingEvents = [
   { city: "Edinburgh", date: "28 Jun", venue: "The Hub, Castlehill", spots: "5 spots left", urgent: true },
@@ -28,7 +29,7 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto px-4 pt-28 pb-16 relative z-10 w-full">
 
-        {/* Top badge — original style */}
+        {/* Top badge */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 bg-[#c9973a]/20 border border-[#c9973a]/40 rounded-full px-4 py-2">
             <span className="text-[#c9973a] text-sm font-medium">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland → 🇹🇷 Turkey</span>
@@ -50,7 +51,7 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* CTA + trust */}
+        {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <a
             href="#booking"
@@ -75,26 +76,23 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Large horizontal YouTube video */}
+        {/* Hero banner image */}
         <div className="relative mb-10">
-          {/* Glow */}
-          <div className="absolute -inset-4 bg-[#c9973a]/10 rounded-3xl blur-2xl" />
-
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10"
-            style={{ aspectRatio: "16/9" }}>
-            <iframe
-              src="https://www.youtube.com/embed/bHZdLupmHv8?rel=0&modestbranding=1&color=white"
-              title="Papatya Dental Clinic — Scotland MeetUp"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-              style={{ border: "none" }}
+          <div className="absolute -inset-2 bg-[#c9973a]/10 rounded-3xl blur-xl" />
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+            <Image
+              src="/hero-banner.png"
+              alt="Dental Meet-Up — Missing Teeth? Let's talk solutions. Perth, Scotland 27–28 June"
+              width={1200}
+              height={630}
+              className="w-full h-auto"
+              priority
             />
           </div>
         </div>
 
         {/* Upcoming events strip */}
-        <div className="bg-white/8 border border-white/15 backdrop-blur-sm rounded-2xl px-6 py-5">
+        <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl px-6 py-5">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-5">
             <div className="flex items-center gap-2 flex-shrink-0">
               <Calendar size={16} className="text-[#c9973a]" />
