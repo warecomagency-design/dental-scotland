@@ -1,20 +1,20 @@
 const videos = [
   {
-    id: "VIDEO_ID_1",
+    id: "7JSYbaUFrAg",
     name: "Margaret T.",
     location: "Edinburgh",
     treatment: "6 Implants + Full Restoration",
     quote: "I waited 3 years on the NHS. After the MeetUp I was in Istanbul within 4 months.",
   },
   {
-    id: "VIDEO_ID_2",
+    id: "UTvCepgTz_I",
     name: "James K.",
     location: "Glasgow",
     treatment: "10 Zirconia Crowns",
     quote: "The clinic was more modern than anything I'd seen in the UK. Results are stunning.",
   },
   {
-    id: "VIDEO_ID_3",
+    id: "bHZdLupmHv8",
     name: "Fiona M.",
     location: "Aberdeen",
     treatment: "Hollywood Smile (12 Veneers)",
@@ -48,8 +48,8 @@ export default function VideoTestimonials() {
               key={v.id}
               className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[#c9973a]/40 hover:shadow-lg hover:shadow-[#c9973a]/10 transition-all group"
             >
-              {/* Video embed */}
-              <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+              {/* Video embed — vertical Short */}
+              <div className="relative w-full" style={{ aspectRatio: "9/16" }}>
                 <iframe
                   src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1&color=white`}
                   title={`Patient testimonial — ${v.name}`}
