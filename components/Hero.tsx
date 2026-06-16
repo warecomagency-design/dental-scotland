@@ -26,14 +26,25 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 pt-28 pb-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12">
+      <div className="max-w-6xl mx-auto px-4 pt-28 pb-20 relative z-10 w-full">
+
+        {/* "We are coming to your city" announcement banner */}
+        <div className="flex justify-center lg:justify-start mb-8">
+          <div className="inline-flex items-center gap-3 bg-[#c9973a]/20 border border-[#c9973a]/50 rounded-full px-5 py-2.5 backdrop-blur-sm">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c9973a] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#c9973a]"></span>
+            </span>
+            <span className="text-[#c9973a] text-sm font-semibold tracking-wide">
+              🏴󠁧󠁢󠁳󠁣󠁴󠁿 &nbsp;We are coming to your city — Scotland MeetUp Tour 2025
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-start gap-10">
+
           {/* Left — main copy */}
           <div className="flex-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-[#c9973a]/20 border border-[#c9973a]/40 rounded-full px-4 py-2 mb-6">
-              <span className="text-[#c9973a] text-sm font-medium">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland → 🇹🇷 Turkey</span>
-            </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Stop Waiting{" "}
               <span className="text-[#c9973a]">2 Years</span>{" "}
@@ -94,7 +105,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <a
                 href="#booking"
                 className="bg-[#c9973a] hover:bg-[#b8862f] text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 text-center shadow-lg shadow-[#c9973a]/30"
@@ -119,27 +130,36 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — stats */}
-          <div className="flex-shrink-0 grid grid-cols-2 gap-4 w-full max-w-xs mx-auto lg:mx-0">
-            {[
-              { number: "500+", label: "Happy Patients", emoji: "😁" },
-              { number: "70%", label: "Average Saving", emoji: "💰" },
-              { number: "4.9★", label: "Patient Rating", emoji: "⭐" },
-              { number: "2 Yrs+", label: "Experience", emoji: "🏆" },
-            ].map((stat) => (
+          {/* Right — vertical YouTube Short */}
+          <div className="flex-shrink-0 mx-auto lg:mx-0">
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute -inset-3 bg-[#c9973a]/20 rounded-3xl blur-xl" />
+
               <div
-                key={stat.label}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center"
+                className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20"
+                style={{ width: "220px", aspectRatio: "9/16" }}
               >
-                <div className="text-3xl mb-1">{stat.emoji}</div>
-                <div className="text-2xl font-bold text-[#c9973a]">{stat.number}</div>
-                <div className="text-white/70 text-xs mt-1">{stat.label}</div>
+                <iframe
+                  src="https://www.youtube.com/embed/bHZdLupmHv8?autoplay=0&loop=1&rel=0&modestbranding=1"
+                  title="Papatya Dental Clinic — Scotland MeetUp"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                  style={{ border: "none" }}
+                />
               </div>
-            ))}
+
+              {/* Badge below video */}
+              <div className="mt-3 text-center">
+                <span className="text-white/50 text-xs">Watch our Scotland tour ↑</span>
+              </div>
+            </div>
           </div>
+
         </div>
 
-        <div className="flex justify-center mt-16 animate-bounce">
+        <div className="flex justify-center mt-14 animate-bounce">
           <a href="#why-turkey" aria-label="Scroll down">
             <ArrowDown className="text-white/40" size={28} />
           </a>
