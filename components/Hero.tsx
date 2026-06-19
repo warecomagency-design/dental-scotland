@@ -68,7 +68,7 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mb-10 text-white/70 text-sm">
-          {["Free consultation", "Guaranteed price", "English-speaking team"].map((item) => (
+          {["Free consultation", "English-speaking team"].map((item) => (
             <div key={item} className="flex items-center gap-2">
               <CheckCircle size={15} className="text-[#c9973a]" />
               <span>{item}</span>

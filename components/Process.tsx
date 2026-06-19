@@ -8,38 +8,31 @@ const steps = [
   },
   {
     number: "02",
-    title: "Free Online Assessment",
-    desc: "Share a few photos of your teeth with us. Our specialist dentist in Turkey will send you a free preliminary assessment and an indicative price within 48 hours.",
-    icon: "📱",
-    tag: "Online",
-  },
-  {
-    number: "03",
     title: "Treatment Plan & Price Confirmation",
-    desc: "Join a video call with the clinic team. Your finalised treatment plan, guaranteed price and estimated timeline are confirmed. All documents in English.",
+    desc: "Join a video call with the clinic team. Your finalised treatment plan and estimated timeline are confirmed. All documents in English.",
     icon: "📋",
     tag: "Video call",
   },
   {
-    number: "04",
+    number: "03",
     title: "Flights & Transfers Sorted",
     desc: "Once you choose your travel dates, we arrange airport transfer, hotel and clinic transport. Your dedicated English-speaking coordinator is with you throughout.",
     icon: "✈️",
     tag: "All logistics on us",
   },
   {
-    number: "05",
+    number: "04",
     title: "Treatment in Turkey",
     desc: "Your treatment is completed at a modern, internationally accredited clinic in Istanbul or Antalya. Most patients stay 5–7 days — plenty of time to enjoy the city too.",
     icon: "🦷",
     tag: "Istanbul / Antalya",
   },
   {
-    number: "06",
-    title: "Back in Scotland — 12-Month Support",
-    desc: "Our WhatsApp aftercare continues for 12 months after you return. All treatments come with a written clinic guarantee.",
-    icon: "🏠",
-    tag: "12-month guarantee",
+    number: "05",
+    title: "Scotland's #1 Preferred Clinic — Here's Why",
+    desc: "More Scottish patients choose Papatya Dental Clinic than any other clinic in Turkey. Trusted by families from Edinburgh to Inverness, we are proud to be the clinic Scotland calls its own. With 16 expert doctors, an 8-floor premium facility, and 100% aftercare — your smile is in the best hands.",
+    icon: "🏆",
+    tag: "Scotland's favourite",
   },
 ];
 
@@ -72,9 +65,13 @@ export default function Process() {
                 className={`flex flex-col lg:flex-row items-center gap-6 ${i % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
               >
                 <div className="flex-1 w-full">
-                  <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <div className={`border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow ${
+                    step.number === "05"
+                      ? "bg-[#0f172a] border-[#c9973a]/40"
+                      : "bg-white border-gray-100"
+                  }`}>
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 bg-[#0f172a] rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                      <div className="w-14 h-14 bg-[#c9973a] rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
                         {step.icon}
                       </div>
                       <div>
@@ -84,8 +81,12 @@ export default function Process() {
                             {step.tag}
                           </span>
                         </div>
-                        <h3 className="font-bold text-[#0f172a] text-lg mb-2">{step.title}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+                        <h3 className={`font-bold text-lg mb-2 ${step.number === "05" ? "text-white" : "text-[#0f172a]"}`}>
+                          {step.title}
+                        </h3>
+                        <p className={`text-sm leading-relaxed ${step.number === "05" ? "text-white/70" : "text-gray-600"}`}>
+                          {step.desc}
+                        </p>
                       </div>
                     </div>
                   </div>

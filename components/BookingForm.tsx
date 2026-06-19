@@ -95,7 +95,7 @@ export default function BookingForm() {
             <div className="space-y-4">
               {[
                 "Attendance is free — no obligation whatsoever",
-                "24-hour WhatsApp response guaranteed",
+                "24-hour WhatsApp response",
                 "English-speaking team throughout",
                 "Free preliminary assessment included",
               ].map((item) => (
