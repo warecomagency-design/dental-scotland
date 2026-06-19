@@ -81,10 +81,10 @@ export default function Hero() {
           <div className="absolute -inset-2 bg-[#c9973a]/10 rounded-3xl blur-xl" />
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
             <Image
-              src="/hero-banner.png"
-              alt="Dental Meet-Up — Missing Teeth? Let's talk solutions. Perth, Scotland 27–28 June"
-              width={1200}
-              height={630}
+              src="/hero-banner.jpg"
+              alt="We're Always Coming Back to Scotland — Papatya Dental Clinic RoadShow 2025"
+              width={1500}
+              height={844}
               className="w-full h-auto"
               priority
             />
