@@ -2,9 +2,9 @@ import { ArrowDown, CheckCircle, Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const upcomingEvents = [
-  { city: "Edinburgh", date: "28 Jun", venue: "The Hub, Castlehill", spots: "5 spots left", urgent: true },
-  { city: "Glasgow", date: "5 Jul", venue: "Malmaison Hotel", spots: "9 spots left", urgent: false },
-  { city: "Aberdeen", date: "12 Jul", venue: "The Chester Hotel", spots: "Open", urgent: false },
+  { city: "Inverness · Perth", date: "27–28 Jun", venue: "Scotland RoadShow", spots: "Next up!", urgent: true },
+  { city: "Ayrshire · Newton Stewart", date: "4–5 Jul", venue: "Scotland RoadShow", spots: "Limited", urgent: false },
+  { city: "Elgin · Stirling", date: "11–12 Jul", venue: "Scotland RoadShow", spots: "Open", urgent: false },
 ];
 
 export default function Hero() {

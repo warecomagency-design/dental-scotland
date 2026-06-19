@@ -3,9 +3,16 @@ import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 
 const meetupCities = [
-  "Edinburgh — 28 June",
-  "Glasgow — 5 July",
-  "Aberdeen — 12 July",
+  "Inverness — 27-28 June",
+  "Perth — 27-28 June",
+  "Ayrshire — 4-5 July",
+  "Newton Stewart — 4-5 July",
+  "Elgin — 11-12 July",
+  "Stirling — 11-12 July",
+  "Arbroath — 18-19 July",
+  "Glenrothes — 18-19 July",
+  "Haddington — 25-26 July",
+  "Taunton (England) — 25-26 July",
 ];
 
 const treatments = [
