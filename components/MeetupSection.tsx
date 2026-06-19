@@ -1,4 +1,4 @@
-import { MapPin, Calendar, CheckCircle, Clock } from "lucide-react";
+import { MapPin, CheckCircle, Clock } from "lucide-react";
 
 const roadshow = [
   {
@@ -99,34 +99,28 @@ export default function MeetupSection() {
                     </span>
                   )}
 
-                  {/* Date column */}
-                  <div className="flex-shrink-0 text-center w-20">
-                    <div className="bg-[#c9973a] text-white text-xs font-bold px-2 py-1 rounded-lg mb-1">
-                      <Calendar size={10} className="inline mr-1" />
-                      {stop.dates.split("–")[0]}
-                    </div>
-                    <div className="text-white/40 text-xs">–{stop.dates.split("–")[1]}</div>
-                  </div>
-
-                  {/* Cities */}
-                  <div className="flex-1">
-                    <div className="flex flex-wrap gap-2 mb-1">
+                  <div className="flex-1 min-w-0">
+                    {/* Date + Cities */}
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1">
+                      <span className="bg-[#c9973a] text-white text-xs font-bold px-2 py-0.5 rounded-lg flex-shrink-0">
+                        {stop.dates}
+                      </span>
                       {stop.cities.map((city) => (
-                        <span key={city} className="flex items-center gap-1 text-white font-bold text-base">
-                          <MapPin size={13} className="text-[#c9973a]" />
+                        <span key={city} className="flex items-center gap-1 text-white font-bold text-sm">
+                          <MapPin size={12} className="text-[#c9973a] flex-shrink-0" />
                           {city}
                           {stop.note && city === "Taunton" && (
-                            <span className="text-[#c9973a] text-xs font-normal ml-1">(England)</span>
+                            <span className="text-[#c9973a] text-xs font-normal">(England)</span>
                           )}
                         </span>
                       ))}
                     </div>
-                    <p className="text-white/40 text-xs">Free dental consultation event · Limited seats</p>
+                    <p className="text-white/40 text-xs">Free dental consultation · Limited seats</p>
                   </div>
 
                   <a
                     href="#booking"
-                    className="flex-shrink-0 self-center bg-[#c9973a] hover:bg-[#b8862f] text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors whitespace-nowrap"
+                    className="flex-shrink-0 self-center bg-[#c9973a] hover:bg-[#b8862f] text-white text-xs font-semibold px-3 py-2 rounded-xl transition-colors"
                   >
                     Book Free
                   </a>

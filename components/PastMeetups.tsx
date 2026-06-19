@@ -36,10 +36,10 @@ export default function PastMeetups() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative">
+          <div className="relative px-4 pb-4">
             {/* Decorative frame */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-[#c9973a] rounded-tl-2xl" />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-[#c9973a] rounded-br-2xl" />
+            <div className="absolute top-0 left-4 w-20 h-20 border-t-4 border-l-4 border-[#c9973a] rounded-tl-2xl" />
+            <div className="absolute bottom-0 right-0 w-20 h-20 border-b-4 border-r-4 border-[#c9973a] rounded-br-2xl" />
 
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image

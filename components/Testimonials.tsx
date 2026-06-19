@@ -107,7 +107,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <div className="mt-16 bg-[#0f172a] rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="mt-16 bg-[#0f172a] rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
             { n: "500+", l: "Treatments Completed" },
             { n: "4.9 / 5", l: "Google Rating" },

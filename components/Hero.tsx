@@ -92,43 +92,43 @@ export default function Hero() {
         </div>
 
         {/* Upcoming events strip */}
-        <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl px-6 py-5">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-5">
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <Calendar size={16} className="text-[#c9973a]" />
-              <span className="text-white font-semibold text-sm">Upcoming Events</span>
-              <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full animate-pulse ml-1">
-                FREE
-              </span>
-            </div>
+        <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl px-4 py-5">
+          <div className="flex items-center gap-2 mb-4">
+            <Calendar size={16} className="text-[#c9973a]" />
+            <span className="text-white font-semibold text-sm">Upcoming Events</span>
+            <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full animate-pulse ml-1">
+              FREE
+            </span>
+          </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 flex-1">
-              {upcomingEvents.map((e) => (
-                <div key={e.city} className="flex items-center gap-3">
-                  <span className="text-[#c9973a] font-bold text-sm w-14 flex-shrink-0">{e.date}</span>
-                  <div>
-                    <p className="text-white text-sm font-medium leading-tight">{e.city}</p>
+          <div className="space-y-3 mb-4">
+            {upcomingEvents.map((e) => (
+              <div key={e.city} className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-3 min-w-0">
+                  <span className="text-[#c9973a] font-bold text-xs w-16 flex-shrink-0">{e.date}</span>
+                  <div className="min-w-0">
+                    <p className="text-white text-sm font-medium leading-tight truncate">{e.city}</p>
                     <div className="flex items-center gap-1 text-white/40 text-xs">
                       <MapPin size={9} />
-                      <span>{e.venue}</span>
+                      <span className="truncate">{e.venue}</span>
                     </div>
                   </div>
-                  {e.urgent && (
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 flex-shrink-0">
-                      {e.spots}
-                    </span>
-                  )}
                 </div>
-              ))}
-            </div>
-
-            <a
-              href="#meetup"
-              className="flex-shrink-0 bg-[#c9973a] hover:bg-[#b8862f] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors whitespace-nowrap"
-            >
-              See all events →
-            </a>
+                {e.urgent && (
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 flex-shrink-0">
+                    {e.spots}
+                  </span>
+                )}
+              </div>
+            ))}
           </div>
+
+          <a
+            href="#meetup"
+            className="block w-full text-center bg-[#c9973a] hover:bg-[#b8862f] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
+          >
+            See all events →
+          </a>
         </div>
 
         <div className="flex justify-center mt-10 animate-bounce">
