@@ -45,8 +45,8 @@ export default function PastMeetups() {
               <Image
                 src="/meetup-team.jpg"
                 alt="Papatya Dental Clinic team at Scotland MeetUp event"
-                width={820}
-                height={1024}
+                width={900}
+                height={1600}
                 className="w-full h-auto object-cover"
               />
               {/* Overlay badge */}
