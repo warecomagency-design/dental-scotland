@@ -9,6 +9,7 @@ import MeetupSection from "@/components/MeetupSection";
 import BookingForm from "@/components/BookingForm";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <FAQ />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
