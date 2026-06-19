@@ -29,11 +29,11 @@ const faqs = [
   },
   {
     q: "Are flights and accommodation included?",
-    a: "We advise on the best flight options (usually Edinburgh or Glasgow to Istanbul or Antalya) but the flight cost is separate. Airport pickup, hotel transfers and clinic transport are included in your package.",
+    a: "We advise on the best flight options (usually Edinburgh or Glasgow to Antalya) but the flight cost is separate. Airport pickup, hotel transfers and clinic transport are included in your package.",
   },
   {
     q: "Which city in Turkey will I be treated in?",
-    a: "We work with clinics in both Istanbul and Antalya. Both are modern, internationally accredited and well used to Scottish patients. The choice is yours — we will advise based on your treatment and travel preferences.",
+    a: "All treatments take place at Papatya Dental Clinic in Antalya — a modern, internationally accredited facility with 16 expert doctors and an 8-floor premium clinic.",
   },
 ];
 

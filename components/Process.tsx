@@ -23,9 +23,9 @@ const steps = [
   {
     number: "04",
     title: "Treatment in Turkey",
-    desc: "Your treatment is completed at a modern, internationally accredited clinic in Istanbul or Antalya. Most patients stay 5–7 days — plenty of time to enjoy the city too.",
+    desc: "Your treatment is completed at Papatya Dental Clinic in Antalya — a modern, internationally accredited facility. Most patients stay 5–7 days — plenty of time to enjoy the city too.",
     icon: "🦷",
-    tag: "Istanbul / Antalya",
+    tag: "Antalya, Turkey",
   },
   {
     number: "05",

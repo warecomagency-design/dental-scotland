@@ -4,7 +4,7 @@ const videos = [
     name: "Margaret T.",
     location: "Edinburgh",
     treatment: "6 Implants + Full Restoration",
-    quote: "I waited 3 years on the NHS. After the MeetUp I was in Istanbul within 4 months.",
+    quote: "I waited 3 years on the NHS. After the MeetUp I was in Antalya within 4 months.",
   },
   {
     id: "UTvCepgTz_I",

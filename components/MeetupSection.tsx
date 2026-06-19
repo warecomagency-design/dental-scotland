@@ -50,7 +50,7 @@ const whatHappens = [
   "Get a same-day on-the-spot preliminary assessment",
   "Receive an indicative price estimate — completely free",
   "Ask anything you want, no pressure, no commitment",
-  "Watch a virtual tour of our Istanbul & Antalya clinics",
+  "Watch a virtual tour of our Antalya clinic",
 ];
 
 export default function MeetupSection() {

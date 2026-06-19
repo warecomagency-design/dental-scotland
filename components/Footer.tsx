@@ -63,7 +63,7 @@ export default function Footer() {
               </a>
               <div className="flex items-center gap-2 text-white/50">
                 <span>📍</span>
-                <span>Edinburgh, Scotland & Istanbul, Turkey</span>
+                <span>Edinburgh, Scotland & Antalya, Turkey</span>
               </div>
             </div>
 

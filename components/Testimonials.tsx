@@ -7,7 +7,7 @@ const testimonials = [
     avatar: "M",
     color: "bg-blue-500",
     quote:
-      "I had been on the NHS waiting list for 3 years with no end in sight. I attended a Scotland Dental MeetUp and four months later I was in Istanbul. Six implants done — the best decision I have made in years. I still can't believe the quality for the price.",
+      "I had been on the NHS waiting list for 3 years with no end in sight. I attended a Scotland Dental MeetUp and four months later I was in Antalya. Six implants done — the best decision I have made in years. I still can't believe the quality for the price.",
   },
   {
     name: "James K.",
@@ -47,7 +47,7 @@ const testimonials = [
     avatar: "A",
     color: "bg-rose-500",
     quote:
-      "Meeting real patients at the MeetUp gave me huge confidence. I hadn't been to a dentist in five years. Now my teeth are in perfect shape and I actually felt like I had a mini-holiday in Istanbul too.",
+      "Meeting real patients at the MeetUp gave me huge confidence. I hadn't been to a dentist in five years. Now my teeth are in perfect shape and I actually felt like I had a mini-holiday in Antalya too.",
   },
   {
     name: "Callum B.",
