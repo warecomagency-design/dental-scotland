@@ -46,13 +46,13 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4 text-sm">Contact</h4>
             <div className="space-y-3 text-sm">
               <a
-                href="https://api.whatsapp.com/send/?phone=%2B441414655616&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=%2B905071304760&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-white/50 hover:text-[#25D366] transition-colors"
               >
                 <span>📱</span>
-                <span>WhatsApp: +44 141 465 5616</span>
+                <span>WhatsApp: +90 507 130 47 60</span>
               </a>
               <a
                 href="mailto:smile@papatyadental.com"
