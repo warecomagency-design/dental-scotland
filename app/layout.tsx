@@ -38,6 +38,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-P5ZF4ZNP');`,
           }}
         />
+        {/* Google Ads */}
+        <Script
+          id="google-ads-src"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11000021109"
+        />
+        <Script
+          id="google-ads-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-11000021109');`,
+          }}
+        />
       </head>
       <body className={inter.className}>
         {/* Google Tag Manager (noscript) */}
