@@ -31,7 +31,7 @@ const roadshow = [
   },
   {
     dates: "18–19 July",
-    cities: ["Arbroath", "Glenrothes"],
+    cities: ["Montrose", "Kirkcaldy"],
     status: "upcoming",
     urgent: false,
   },

@@ -4,7 +4,7 @@ import Image from "next/image";
 const upcomingEvents = [
   { city: "Inverness · Perth", date: "27–28 Jun", venue: "Scotland RoadShow", spots: "Next up!", urgent: true },
   { city: "Ayrshire · Newton Stewart", date: "4–5 Jul", venue: "Scotland RoadShow", spots: "Limited", urgent: false },
-  { city: "Elgin · Stirling", date: "11–12 Jul", venue: "Scotland RoadShow", spots: "Open", urgent: false },
+  { city: "Montrose · Kirkcaldy", date: "18–19 Jul", venue: "Scotland RoadShow", spots: "Open", urgent: false },
 ];
 
 export default function Hero() {

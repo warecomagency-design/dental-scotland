@@ -9,8 +9,8 @@ const meetupCities = [
   "Newton Stewart — 4-5 July",
   "Elgin — 11-12 July",
   "Stirling — 11-12 July",
-  "Arbroath — 18-19 July",
-  "Glenrothes — 18-19 July",
+  "Montrose — 18-19 July",
+  "Kirkcaldy — 18-19 July",
   "Haddington — 25-26 July",
   "Taunton (England) — 25-26 July",
 ];
