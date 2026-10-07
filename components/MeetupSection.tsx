@@ -14,14 +14,13 @@ const roadshow = [
   {
     dates: "27–28 June",
     cities: ["Inverness", "Perth"],
-    status: "upcoming",
-    urgent: true,
+    status: "completed",
   },
   {
     dates: "4–5 July",
     cities: ["Ayrshire", "Newton Stewart"],
     status: "upcoming",
-    urgent: false,
+    urgent: true,
   },
   {
     dates: "11–12 July",
@@ -31,7 +30,7 @@ const roadshow = [
   },
   {
     dates: "18–19 July",
-    cities: ["Montrose", "Kirkcaldy"],
+    cities: ["Kirkcaldy"],
     status: "upcoming",
     urgent: false,
   },
@@ -41,6 +40,50 @@ const roadshow = [
     status: "upcoming",
     urgent: false,
     note: "Taunton, England",
+  },
+  {
+    dates: "22–23 Aug",
+    cities: ["Carlisle", "Kendal"],
+    status: "upcoming",
+    urgent: false,
+    note: "UK",
+  },
+  {
+    dates: "29–30 Aug",
+    cities: ["Kilmarnock", "Inverness"],
+    status: "upcoming",
+    urgent: false,
+  },
+  {
+    dates: "5–6 Sep",
+    cities: ["Montrose", "Stirling"],
+    status: "upcoming",
+    urgent: false,
+  },
+  {
+    dates: "12–13 Sep",
+    cities: ["Dumfries", "Kirkcaldy"],
+    status: "upcoming",
+    urgent: false,
+  },
+  {
+    dates: "19–20 Sep",
+    cities: ["Haddington", "Ayr"],
+    status: "upcoming",
+    urgent: false,
+  },
+  {
+    dates: "26–27 Sep",
+    cities: ["Plymouth", "Hull"],
+    status: "upcoming",
+    urgent: false,
+    note: "UK",
+  },
+  {
+    dates: "3–4 Oct",
+    cities: ["Perth", "Elgin"],
+    status: "upcoming",
+    urgent: false,
   },
 ];
 

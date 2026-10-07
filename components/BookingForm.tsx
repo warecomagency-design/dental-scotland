@@ -3,16 +3,27 @@ import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 
 const meetupCities = [
-  "Inverness — 27-28 June",
-  "Perth — 27-28 June",
   "Ayrshire — 4-5 July",
   "Newton Stewart — 4-5 July",
   "Elgin — 11-12 July",
   "Stirling — 11-12 July",
-  "Montrose — 18-19 July",
   "Kirkcaldy — 18-19 July",
   "Haddington — 25-26 July",
   "Taunton (England) — 25-26 July",
+  "Carlisle (UK) — 22-23 August",
+  "Kendal (UK) — 22-23 August",
+  "Kilmarnock — 29-30 August",
+  "Inverness — 29-30 August",
+  "Montrose — 5-6 September",
+  "Stirling — 5-6 September",
+  "Dumfries — 12-13 September",
+  "Kirkcaldy — 12-13 September",
+  "Haddington — 19-20 September",
+  "Ayr — 19-20 September",
+  "Plymouth (UK) — 26-27 September",
+  "Hull (UK) — 26-27 September",
+  "Perth — 3-4 October",
+  "Elgin — 3-4 October",
 ];
 
 const treatments = [
@@ -47,9 +58,26 @@ export default function BookingForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          city: form.city,
+          treatment: form.treatment,
+          message: form.message,
+        }),
+      });
+      if (!res.ok) throw new Error("API error");
+    } catch (err) {
+      console.error("Form submission error:", err);
+    } finally {
+      setLoading(false);
+      setSubmitted(true);
+    }
   };
 
   if (submitted) {

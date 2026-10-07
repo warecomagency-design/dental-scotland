@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Papatya Dental Clinic Turkey | Scotland MeetUp Events",
   description:
     "Stop waiting years for NHS dental care. Papatya Dental Clinic Turkey brings world-class dentistry to Scottish patients — up to 70% savings, end-to-end organisation, free MeetUp events across Scotland.",
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📅</text></svg>",
+  },
   openGraph: {
     title: "Papatya Dental Clinic Turkey | Scotland MeetUp Events",
     description:
@@ -38,6 +41,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-P5ZF4ZNP');`,
           }}
         />
+        {/* Meta Pixel */}
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2153229218500137');
+fbq('track','PageView');`,
+          }}
+        />
         {/* Google Ads */}
         <Script
           id="google-ads-src"
@@ -63,6 +83,15 @@ gtag('config', 'AW-11000021109');`,
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=2153229218500137&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
         {children}
